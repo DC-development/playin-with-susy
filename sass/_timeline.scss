@@ -69,7 +69,7 @@ $pageBackground:#f2f2f2;
         }
     }
 }
-@include breakpoint (max-width 661px) {
+@include breakpoint (max-width 659px) {
     section#slider, header {
         @include span(12 at 4);
     }
