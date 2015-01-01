@@ -1,0 +1,4 @@
+.myButton {    
+    @include sassy-button("glass", 4px, 14px, #efbe2d, #dead2c);
+    padding: 0.5em 0.75em;
+}

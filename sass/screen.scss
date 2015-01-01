@@ -1,0 +1,40 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+// Screen
+// ======
+//@import "compass/reset";
+@import "compass/typography";
+@import "grids";
+@import "breakpoint";
+@import "sassy-buttons";
+@import "../bower_components/fontawesome/scss/font-awesome.scss";
+@import "icons";
+@import "buttons";
+@import "typo";
+@import "timeline";
+//#Full sassy button mixin with argument descriptions.
+//@include sassy-button(gradient-style, border-radius, font-size, first-color, second-color, text-color, text-style, auto-states)
+body {
+    @include container(90%);
+    background-color: $pageBackground;
+}
+header {
+    border: 2px solid $timelineOutline;
+}
+
+section#slider {
+    
+    article {
+        @include span(3);
+        height: 120px;
+    }
+}
+
+@include breakpoint(max-width 500px) {
+    section {
+        @include span(50%);
+    }
+}
