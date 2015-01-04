@@ -1,7 +1,4 @@
-$pageBackground:#f2f2f2;
-$timelineOutline:#dead2c;
-$timelineActive:#d2d2d2;
-
+/* Styling for the timline view/module */
 section#profileSlider {
   article {
     min-height: 180px;
@@ -9,16 +6,17 @@ section#profileSlider {
 }
 header {
   border-bottom: 0px solid $timelineOutline;
-  box-shadow: 0px 6px 14px -5px #666666;
+  box-shadow: 0px 6px 14px -5px $darkGrey;
   .entry-header {
     display: inline;
     float: left;
   }
   .company-logo {
     float:right;
+    margin-top:5px;
   }
 }
-
+/* breakpoint medium and larger */
 @include breakpoint (min-width 660px) {
   section#profileSlider, header {
     @include span(15);
