@@ -1,138 +1,160 @@
 $pageBackground:#f2f2f2;
- $timelineOutline:#dead2c;
- $timelineActive:#d2d2d2;
+$timelineOutline:#dead2c;
+$timelineActive:#d2d2d2;
+
+section#profileSlider {
+  article {
+    min-height: 180px;
+  }
+}
+header {
+  border-bottom: 0px solid $timelineOutline;
+  box-shadow: 0px 6px 14px -5px #666666;
+  .entry-header {
+    display: inline;
+    float: left;
+  }
+  .company-logo {
+    float:right;
+  }
+}
+
 @include breakpoint (min-width 660px) {
-    section#slider, header {
-        @include span(15);
+  section#profileSlider, header {
+    @include span(15);
+  }
+  
+  #timeline {
+    @include full;
+    @include span(15);
+    // position: fixed;
+    // bottom: 0;
+    padding: 0;
+    margin-top: 30px;
+    border-top: 4px solid $timelineOutline;
+    height: 90px;
+    .entry.first {
+      margin-left: 7.3%;
     }
-    #timeline {
-        @include full;
-        @include span(15);
-        padding: 0;
-        border-bottom: 4px solid $timelineOutline;
-        height: 60px;
-        .entry.first {
-            margin-left: 7.3%;
-        }
-        .entry.last {
-            margin-right: 0px;
-        }
-        .entry {
-            width: 5px;
-            height: 38px;
-            float: left;
-            padding: 0;
-            margin-right: 4.59%;
-            margin-top: 32px;
-            overlow: visible;
-            /* border: 1px solid red; */
-            -ms-transform: rotate(-45deg);
-            -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-            margin-left: 4.59%;
-            h2 {
-                line-height: 20px;
-                width: 100px;
-                font-weight: normal;
-                margin-left: -118px;
-                font-size: 12px;
-                color: $timelineOutline;
-                &:hover {
-                    cursor: pointer;
-                }
-            }
-            .circle {
-                float: right;
-                height: 26px;
-                width: 26px;
-                border: 4px solid $timelineOutline;
-                border-radius: 30px;
-                background-color: $pageBackground;
-                .dot {
-                    position: relative;
-                    left: 3px;
-                    top: 3px;
-                    height: 18px;
-                    width: 18px;
-                    border: 1px solid $timelineOutline;
-                    border-radius: 15px;
-                    background-color: $timelineOutline;
-                }
-                &:hover {
-                    cursor: pointer;
-                    .dot {
-                        border-color: $timelineActive;
-                        background-color: $timelineActive;
-                    }
-                }
-            }
-        }
+    .entry.last {
+      margin-right: 0px;
     }
+    .entry {
+      width: 5px;
+      height: 38px;
+      float: left;
+      padding: 0;
+      margin-right: 4.59%;
+      margin-top: -26px;
+      overlow: visible;
+      /* border: 1px solid red; */
+      -ms-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      margin-left: 4.59%;
+      h2 {
+        line-height: 16px;
+        width: 80px;
+        font-weight: normal;
+        margin-left: -104px;
+        font-size: 12px;
+        color: $timelineOutline;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .circle {
+        float: right;
+        height: 22px;
+        width: 22px;
+        border: 4px solid $timelineOutline;
+        border-radius: 30px;
+        background-color: $pageBackground;
+        .dot {
+          position: relative;
+          left: 3px;
+          top: 3px;
+          height: 14px;
+          width: 14px;
+          border: 1px solid $timelineOutline;
+          border-radius: 15px;
+          background-color: $timelineOutline;
+        }
+        &:hover {
+          cursor: pointer;
+          .dot {
+            border-color: $timelineActive;
+            background-color: $timelineActive;
+          }
+        }
+      }
+    }
+  }
 }
 @include breakpoint (max-width 659px) {
-    section#slider, header {
-        @include span(12 at 4);
-    }
-    #timeline {
-        @include span(2 of 15);
-        padding: 0;
-        position: absolute;
-        border-right: 4px solid $timelineOutline;
-        height: 120%;
-        width: 3px;
-        .entry {
-            width: 114px;
-            height: 120px;
-            float: none;
-            margin-left: -51px;
-            margin-bottom: -110px;
-            margin-top: 36px;
-            -ms-transform: rotate(45deg);
-            /* IE 9 */
-            -webkit-transform: rotate(45deg);
-            /* Chrome, Safari, Opera */
-            transform: rotate(45deg);
-            h2 {
-                line-height: 16px;
-                float: right;
-                font-weight: normal;
-                font-size: 12px;
-                color: $timelineOutline;
-                //border: 1px solid $timelineOutline;
-                background-color: $pageBackground;
-                &:hover {
-                    cursor: pointer;
-                    
-                }
-            }
-            .circle {
-                float: left;
-                
-                margin-top: 9px;
-                height: 18px;
-                width: 18px;
-                border: 4px solid $timelineOutline;
-                border-radius: 30px;
-                background-color: $pageBackground;
-                .dot {
-                    position: relative;
-                    left: 3px;
-                    top: 3px;
-                    height: 10px;
-                    width: 10px;
-                    border: 1px solid $timelineOutline;
-                    border-radius: 10px;
-                    background-color: $timelineOutline;
-                }
-                &:hover {
-                    cursor: pointer;
-                    .dot {
-                        border-color: $timelineActive;
-                        background-color: $timelineActive;
-                    }
-                }
-            }
-            ;
+  section#profileSlider, header {
+    @include span(12 at 4);
+  }
+  #timeline {
+    @include span(2 of 15);
+    padding: 0;
+    position: absolute;
+    border-right: 4px solid $timelineOutline;
+    height: 120%;
+    width: 3px;
+    .entry {
+      width: 114px;
+      height: 120px;
+      float: none;
+      margin-left: -51px;
+      margin-bottom: -110px;
+      margin-top: 36px;
+      -ms-transform: rotate(45deg);
+      /* IE 9 */
+      -webkit-transform: rotate(45deg);
+      /* Chrome, Safari, Opera */
+      transform: rotate(45deg);
+      h2 {
+        line-height: 16px;
+        float: right;
+        font-weight: normal;
+        font-size: 12px;
+        color: $timelineOutline;
+        //border: 1px solid $timelineOutline;
+        background-color: $pageBackground;
+        &:hover {
+          cursor: pointer;
+
         }
+      }
+      .circle {
+        float: left;
+
+        margin-top: 9px;
+        height: 18px;
+        width: 18px;
+        border: 4px solid $timelineOutline;
+        border-radius: 30px;
+        background-color: $pageBackground;
+        .dot {
+          position: relative;
+          left: 3px;
+          top: 3px;
+          height: 10px;
+          width: 10px;
+          border: 1px solid $timelineOutline;
+          border-radius: 10px;
+          background-color: $timelineOutline;
+        }
+        &:hover {
+          cursor: pointer;
+          .dot {
+            border-color: $timelineActive;
+            background-color: $timelineActive;
+          }
+        }
+      }
+    ;
     }
+  }
 }

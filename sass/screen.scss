@@ -21,20 +21,3 @@ body {
     @include container(90%);
     background-color: $pageBackground;
 }
-header {
-    border: 2px solid $timelineOutline;
-}
-
-section#slider {
-    
-    article {
-        @include span(3);
-        height: 120px;
-    }
-}
-
-@include breakpoint(max-width 500px) {
-    section {
-        @include span(50%);
-    }
-}
