@@ -32,7 +32,7 @@ header {
     border-top: 4px solid $timelineOutline;
     height: 90px;
     .entry.first {
-      margin-left: 7.3%;
+      margin-left: 7.35%;
     }
     .entry.last {
       margin-right: 0px;
@@ -42,7 +42,7 @@ header {
       height: 38px;
       float: left;
       padding: 0;
-      margin-right: 4.59%;
+      margin-right: 6.7%;
       margin-top: -26px;
       overlow: visible;
       /* border: 1px solid red; */
@@ -52,10 +52,12 @@ header {
       margin-left: 4.59%;
       h2 {
         line-height: 16px;
-        width: 80px;
-        font-weight: normal;
-        margin-left: -104px;
+        font-weight: bold;
+        margin-left: -158px;
+        width: 120px;
+        text-align: right;
         font-size: 12px;
+        margin-top: 0px;
         color: $timelineOutline;
         &:hover {
           cursor: pointer;
@@ -106,20 +108,19 @@ header {
       float: none;
       margin-left: -51px;
       margin-bottom: -110px;
-      margin-top: 36px;
+      margin-top: 56px;
       -ms-transform: rotate(45deg);
       /* IE 9 */
       -webkit-transform: rotate(45deg);
       /* Chrome, Safari, Opera */
       transform: rotate(45deg);
       h2 {
+        width:140px;
         line-height: 16px;
-        float: right;
         font-weight: normal;
         font-size: 12px;
         color: $timelineOutline;
-        //border: 1px solid $timelineOutline;
-        background-color: $pageBackground;
+        margin-left: 37px;
         &:hover {
           cursor: pointer;
 
